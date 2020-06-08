@@ -1,0 +1,14 @@
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.ElasticSearch/bin/Debug/netcoreapp3.1/BookCatalogueESNet.ElasticSearch.deps.json
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.ElasticSearch/bin/Debug/netcoreapp3.1/BookCatalogueESNet.ElasticSearch.dll
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.ElasticSearch/bin/Debug/netcoreapp3.1/BookCatalogueESNet.ElasticSearch.pdb
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.ElasticSearch/bin/Debug/netcoreapp3.1/BookCatalogueESNet.Contracts.dll
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.ElasticSearch/bin/Debug/netcoreapp3.1/BookCatalogueESNet.ElasticSearch.Documents.dll
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.ElasticSearch/bin/Debug/netcoreapp3.1/BookCatalogueESNet.Contracts.pdb
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.ElasticSearch/bin/Debug/netcoreapp3.1/BookCatalogueESNet.ElasticSearch.Documents.pdb
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.ElasticSearch/obj/Debug/netcoreapp3.1/BookCatalogueESNet.ElasticSearch.csprojAssemblyReference.cache
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.ElasticSearch/obj/Debug/netcoreapp3.1/BookCatalogueESNet.ElasticSearch.csproj.CoreCompileInputs.cache
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.ElasticSearch/obj/Debug/netcoreapp3.1/BookCatalogueESNet.ElasticSearch.AssemblyInfoInputs.cache
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.ElasticSearch/obj/Debug/netcoreapp3.1/BookCatalogueESNet.ElasticSearch.AssemblyInfo.cs
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.ElasticSearch/obj/Debug/netcoreapp3.1/BookCatalogueESNet.ElasticSearch.csproj.CopyComplete
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.ElasticSearch/obj/Debug/netcoreapp3.1/BookCatalogueESNet.ElasticSearch.dll
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.ElasticSearch/obj/Debug/netcoreapp3.1/BookCatalogueESNet.ElasticSearch.pdb

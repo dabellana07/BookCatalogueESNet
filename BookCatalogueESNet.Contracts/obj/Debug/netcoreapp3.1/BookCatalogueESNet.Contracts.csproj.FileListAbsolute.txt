@@ -1,0 +1,12 @@
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.Contracts/bin/Debug/netcoreapp3.1/BookCatalogueESNet.Contracts.deps.json
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.Contracts/bin/Debug/netcoreapp3.1/BookCatalogueESNet.Contracts.dll
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.Contracts/bin/Debug/netcoreapp3.1/BookCatalogueESNet.Contracts.pdb
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.Contracts/bin/Debug/netcoreapp3.1/BookCatalogueESNet.ElasticSearch.Documents.dll
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.Contracts/bin/Debug/netcoreapp3.1/BookCatalogueESNet.ElasticSearch.Documents.pdb
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.Contracts/obj/Debug/netcoreapp3.1/BookCatalogueESNet.Contracts.csprojAssemblyReference.cache
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.Contracts/obj/Debug/netcoreapp3.1/BookCatalogueESNet.Contracts.csproj.CoreCompileInputs.cache
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.Contracts/obj/Debug/netcoreapp3.1/BookCatalogueESNet.Contracts.AssemblyInfoInputs.cache
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.Contracts/obj/Debug/netcoreapp3.1/BookCatalogueESNet.Contracts.AssemblyInfo.cs
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.Contracts/obj/Debug/netcoreapp3.1/BookCatalogueESNet.Contracts.csproj.CopyComplete
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.Contracts/obj/Debug/netcoreapp3.1/BookCatalogueESNet.Contracts.dll
+/Users/destiny/Work/TutorialProjects/BookCatalogueESNet/BookCatalogueESNet/BookCatalogueESNet.Contracts/obj/Debug/netcoreapp3.1/BookCatalogueESNet.Contracts.pdb
