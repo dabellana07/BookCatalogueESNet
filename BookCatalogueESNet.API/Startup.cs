@@ -33,8 +33,7 @@ namespace BookCatalogueESNet.API
             
             services.AddAutoMapper(typeof(Startup));
 
-            services.AddSingleton<IElasticLowLevelClient, ElasticLowLevelClient>();
-            services.AddScoped<IBookElasticService, BookElasticService>();
+            AddElasticSearch(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,6 +52,13 @@ namespace BookCatalogueESNet.API
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+        }
+
+        private void AddElasticSearch(IServiceCollection services)
+        {
+            var settings = new ConnectionConfiguration(new Uri(Configuration["ElasticSearchUrl"]));
+            services.AddSingleton<IElasticLowLevelClient>(new ElasticLowLevelClient(settings));
+            services.AddScoped<IBookElasticService, BookElasticService>();
         }
     }
 }
