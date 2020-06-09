@@ -17,5 +17,6 @@ namespace BookCatalogueESNet.Contracts.ElasticSearch.Services
             DateTime? endDate = null,
             int take = 10);
         Task<Book> GetBook(Guid id);
+        public void InitClient();
     }
 }

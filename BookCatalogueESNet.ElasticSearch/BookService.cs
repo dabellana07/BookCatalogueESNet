@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using BookCatalogueESNet.Contracts.ElasticSearch.Services;
 using BookCatalogueESNet.ElasticSearch.Documents;
 using Elasticsearch.Net;
+using Elasticsearch.Net.Specification.IndicesApi;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using JsonSerializer = System.Text.Json.JsonSerializer;
@@ -15,11 +17,13 @@ namespace BookCatalogueESNet.ElasticSearch
     public class BookService : IBookElasticService
     {
         private readonly IElasticLowLevelClient _client;
+        private readonly ILogger<BookService> _logger;
         private const string IndexName = "books";
 
-        public BookService(IElasticLowLevelClient client)
+        public BookService(IElasticLowLevelClient client, ILogger<BookService> logger)
         {
             _client = client;
+            _logger = logger;
         }
 
         public async Task<IEnumerable<Book>> SearchBooks(
@@ -95,13 +99,13 @@ namespace BookCatalogueESNet.ElasticSearch
         public async Task UpdateBook(Book book)
         {
             var response = await _client.UpdateAsync<StringResponse>(
-                IndexName, 
-                book.Id.ToString(), 
+                IndexName,
+                book.Id.ToString(),
                 PostData.Serializable(new
                 {
                     doc = book
                 }));
-            
+
             if (!response.Success)
             {
                 throw response.OriginalException;
@@ -147,7 +151,7 @@ namespace BookCatalogueESNet.ElasticSearch
             }
 
             // PublishDate and Genre
-            if (string.IsNullOrEmpty(searchValue) 
+            if (string.IsNullOrEmpty(searchValue)
                 && (startDate.HasValue || endDate.HasValue)
                 && !string.IsNullOrEmpty(genre))
             {
@@ -172,9 +176,9 @@ namespace BookCatalogueESNet.ElasticSearch
                     }
                 };
             }
-            
+
             // Title and Genre
-            if (!string.IsNullOrEmpty(searchValue) 
+            if (!string.IsNullOrEmpty(searchValue)
                 && (!startDate.HasValue && !endDate.HasValue)
                 && !string.IsNullOrEmpty(genre))
             {
@@ -202,9 +206,9 @@ namespace BookCatalogueESNet.ElasticSearch
                     }
                 };
             }
-            
+
             // Title and PublishDate
-            if (!string.IsNullOrEmpty(searchValue) 
+            if (!string.IsNullOrEmpty(searchValue)
                 && (startDate.HasValue || endDate.HasValue)
                 && string.IsNullOrEmpty(genre))
             {
@@ -255,7 +259,7 @@ namespace BookCatalogueESNet.ElasticSearch
                     }
                 };
             }
-            
+
             // Title
             if ((!startDate.HasValue && !endDate.HasValue)
                 && string.IsNullOrEmpty(genre)
@@ -275,7 +279,7 @@ namespace BookCatalogueESNet.ElasticSearch
                     }
                 };
             }
-            
+
             // Genre
             if ((!startDate.HasValue && !endDate.HasValue)
                 && !string.IsNullOrEmpty(genre)
@@ -330,6 +334,50 @@ namespace BookCatalogueESNet.ElasticSearch
             }
 
             return new { };
+        }
+
+        public void InitClient()
+        {
+            var postData = new
+            {
+                settings = new
+                {
+                    analysis = new
+                    {
+                        filter = new
+                        {
+                            custom_latin_transformer = new
+                            {
+                                type = "icu_transform",
+                                id = "Any-Latin; NFD; [:Nonspacing Mark:] Remove; NFC"
+                            }
+                        },
+                        analyzer = new
+                        {
+                            latin = new
+                            {
+                                tokenizer = "keyword",
+                                filter = new[] {"custom_latin_transformer"}
+                            }
+                        }
+                    }
+                }
+            };
+            var param = new CreateIndexRequestParameters
+            {
+                Timeout = TimeSpan.FromSeconds(60)
+            };
+            var response = _client.Indices.Create<StringResponse>(
+                IndexName, PostData.Serializable(postData), param);
+
+            if (!response.Success)
+            {
+                _logger.LogError("Index Create Not Successful: " + response.OriginalException.ToString());
+            }
+            else
+            {
+                _logger.LogInformation("Index Create Successful");
+            }
         }
     }
 }
