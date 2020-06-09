@@ -95,8 +95,13 @@ namespace BookCatalogueESNet.ElasticSearch
         public async Task UpdateBook(Book book)
         {
             var response = await _client.UpdateAsync<StringResponse>(
-                IndexName, book.Id.ToString(), PostData.Serializable(book));
-
+                IndexName, 
+                book.Id.ToString(), 
+                PostData.Serializable(new
+                {
+                    doc = book
+                }));
+            
             if (!response.Success)
             {
                 throw response.OriginalException;
