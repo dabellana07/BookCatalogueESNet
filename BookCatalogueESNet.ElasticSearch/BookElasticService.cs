@@ -14,13 +14,13 @@ using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace BookCatalogueESNet.ElasticSearch
 {
-    public class BookService : IBookElasticService
+    public class BookElasticService : IBookElasticService
     {
         private readonly IElasticLowLevelClient _client;
-        private readonly ILogger<BookService> _logger;
+        private readonly ILogger<BookElasticService> _logger;
         private const string IndexName = "books";
 
-        public BookService(IElasticLowLevelClient client, ILogger<BookService> logger)
+        public BookElasticService(IElasticLowLevelClient client, ILogger<BookElasticService> logger)
         {
             _client = client;
             _logger = logger;

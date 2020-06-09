@@ -34,7 +34,7 @@ namespace BookCatalogueESNet.API
             services.AddAutoMapper(typeof(Startup));
 
             services.AddSingleton<IElasticLowLevelClient, ElasticLowLevelClient>();
-            services.AddScoped<IBookElasticService, BookService>();
+            services.AddScoped<IBookElasticService, BookElasticService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
